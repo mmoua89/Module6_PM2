@@ -11,7 +11,7 @@ class ShoppingCart:
         self.cartItems = []
 
     def addItem(self, itemToPurchase):
-        self.cartItems.append(Item(**itemToPurchase))
+        self.cartItems.append(itemToPurchase)
 
     def removeItem(self, itemName):
         for item in self.cartItems:
@@ -55,4 +55,5 @@ class ShoppingCart:
 
 
     def printDescriptions(self):
-        pass
+        for item in self.cartItems:
+            print('{}: {}'.format(item.itemName, item.itemDescription))

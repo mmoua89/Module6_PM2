@@ -6,10 +6,10 @@ Assignment: Module 6, Portfolio Milestone 2
 from ShoppingCart import ShoppingCart
 from Item import Item
 def main():
-    shoppingCart = ShoppingCart()
+    shoppingCart = ShoppingCart("Meng")
     userInput = ""
 
-    while userInput != 'q' or userInput != 'quit':
+    while userInput != 'q':
         printMenu()
         userInput = input()
 
@@ -27,9 +27,12 @@ def main():
             item = Item(itemName, float(itemPrice), int(itemQuantity), itemDescription)
             shoppingCart.addItem(item)
         elif userInput == 'o':
+            print("{}'s Shopping Cart - {}".format(shoppingCart.customerName, shoppingCart.currentDate))
             shoppingCart.printTotal()
+        elif userInput == 'i':
+            shoppingCart.printDescriptions()
 
-
+        print()
 
 def printMenu():
     menuList = ['a - Add item to cart',
@@ -41,7 +44,7 @@ def printMenu():
     print('Menu')
     for menuItem in menuList:
         print(menuItem)
-    print('Choose an option:\n')
+    print('Choose an option:')
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
