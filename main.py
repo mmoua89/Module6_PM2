@@ -49,7 +49,7 @@ def main():
                 itemQuantity = int(input('Item quantity:\n'))
                 itemDescription = input('Item description:\n')
             except ValueError:
-                print('Entered value is invalid. Please try again.')
+                print('Entered value is invalid. Please try again.\n')
                 continue
 
             # append item in (Item) class
