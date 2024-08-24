@@ -26,5 +26,5 @@ class Item:
         Display the item name and the total cost
         :return: void
         """
-        print("{} {} @ ${} = ${:.2f}".format(self.itemName,
+        print("{} {} @ ${:.2f} = ${:.2f}".format(self.itemName,
               self.itemQuantity, self.itemPrice, self.calculate_total_cost()))
